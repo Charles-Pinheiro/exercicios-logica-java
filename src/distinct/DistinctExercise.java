@@ -21,26 +21,30 @@ public class DistinctExercise {
 
 		for(int i = 0; i < A.length; i++){
 
-			// Variável para controlar se o elemento já está no array auxiliar
+			// Variável para controlar se o elemento não está no array auxiliar
 			boolean distinct = true;
 
 			// Se o array auxiliar estiver vazio adiciono o valor nele e passo o 'distinct' para false
 			if (arrDistinct.size() == 0) {
 				arrDistinct.add(A[i]);
 				distinct = false;
+
 			} else {
+				// Loop no array auxiliar para comparar se ele já tem a variavel do loop do array A
 				for (int j = 0; j < arrDistinct.size(); j++) {
+					// Se a variavel já estiver presente eu seto o distinct pra false e saiu do loop do array auxiliar
 					if (A[i] == arrDistinct.get(j)) {
 						distinct = false;
 						break;
 					}
 				}
+				// Se o elemento for distinto ele é adicionado ao array auxiliar
 				if (distinct) {
 					arrDistinct.add(A[i]);
 				}
 			}
-
 		}
+		// retorno o tamanho do array auxiliar que contém todos os elementos distintos
 		return arrDistinct.size();
 
 	}

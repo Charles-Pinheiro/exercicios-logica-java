@@ -4,7 +4,7 @@ public class ArrayExcercise {
 
 	public int Solution(int[] A) {
 
-		// Verificação: Array com 1 elemento retorna o elemento, Array sem elementos retorna 0
+		// Verificação: Array com 1 elemento retorna o elemento
 		if (A.length == 1) {
 			return A[0];
 		}
